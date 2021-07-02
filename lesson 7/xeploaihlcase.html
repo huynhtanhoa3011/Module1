@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let score = prompt("Nhập điểm học sinh: ")
+        switch(true){
+            case (score <= 10 && score >=9):
+                console.log("Xuất sắc");
+                break;
+
+            case (score <= 9 && score >= 8):
+                console.log("Giỏi");
+                break;
+
+            case (score <= 8 && score >= 7):
+                console.log("Khá");
+                break;
+            
+            case (score <= 7 && score >= 5):
+                console.log("Trung bình");
+                break;
+
+            case (score < 5 && score >= 1):
+                console.log("Yếu");
+                break;
+            case (score <= 0):
+                console.log("Kém");
+                break;
+                
+            default:
+                console.log("Sai giá trị");
+        }
+    </script>
+</body>
+</html>
