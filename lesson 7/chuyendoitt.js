@@ -6,9 +6,9 @@ function chuyendoi() {
     if (from == to) {
         count = number  * 1 * 1;
     } else if (from == "VND" && to == "USD") {
-        count = number * 1 / 22000;
+        count = number * 1 / 23000;
     } else if (from == "USD" && to == "VND") {
-        count = number * 1 * 22000;
+        count = number * 1 * 23000;
     }
     console.log(count);
     document.getElementById("demo").innerHTML = "restur :"  + count; 
