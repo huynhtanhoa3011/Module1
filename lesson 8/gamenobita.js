@@ -31,8 +31,6 @@ function moveSelection(evt) {//Xây dựng các hàm nhận các phím
             downArrowPressed();
             break;
     }
-
-
 }
 function docReady() {//Xây dựng hàm doReady()
     window.addEventListener('keydown', moveSelection);
