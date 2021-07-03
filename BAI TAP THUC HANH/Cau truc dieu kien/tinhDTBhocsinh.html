@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Điểm tb</title>
+</head>
+
+<body>
+    <script>
+        let dtb = parseInt(prompt("nhap diem tb"));
+
+        if (dtb >10 || dtb < 0){
+            console.log ("Không hợp lệ");
+        }
+        else 
+        if (dtb >= 9 && dtb <= 10) {
+            console.log("XS");
+        }
+        else if (dtb >= 8) {
+            console.log("G");
+        }
+        else if (dtb >= 7) {
+            console.log("K");
+        }
+        else if (dtb >= 5) {
+            console.log("TB");
+        }
+        else if (dtb >= 0) {
+            console.log("Y");
+        }
+        else {
+            console.log("Không hợp lệ");
+
+        }
+    </script>
+</body>
+
+</html>
