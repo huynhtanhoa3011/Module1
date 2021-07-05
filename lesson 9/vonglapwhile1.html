@@ -10,15 +10,15 @@
 
 <body>
     <script>
-        var num = parseInt(prompt("Enter a number:"));
+        var num = parseInt(prompt("Enter a number:",''));
         var total = 0;
-        while (num != - 1); {
-            num = parseInt(prompt("Enter a number:"));
-            alert(number);
+        while (num != - 1) {
+            alert(num);
             total = total + num;
-
+            num = parseInt(prompt("Enter a number:",''));
+            alert(total);
         }
-        alert(total);
+        document.write(total);
     </script>
 </body>
 
