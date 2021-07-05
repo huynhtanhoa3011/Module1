@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var testScore= parseInt(prompt("nhập điểm kiểm tra:"));
+        var midExamScore = parseInt(prompt("nhập điểm thi giữa kỳ:"));
+        var finishExamScore = parseInt(prompt("nhập điểm thi cuối kỳ:"));
+        var score= (testScore + midExamScore * 2 + finishExamScore * 3) / 6
+        if (score >=9 && score <=10 && finishExamScore >=9) {
+            alert("xuất sắc");
+
+        } else if (score >=8 && score <=9 && finishExamScore >=8) {
+            alert("giỏi");
+
+        } else if (score >=6.5 && score <=8 && finishExamScore >=6.5) {
+            alert("khá");
+
+        } else if (score >=5 && score <=6.5 && finishExamScore >=5) {
+            alert("trung bình");  
+            
+        } else if (score >=0 && finishExamScore >=8) {
+            alert("yếu");
+        }
+    </script>
+</body>
+</html>
