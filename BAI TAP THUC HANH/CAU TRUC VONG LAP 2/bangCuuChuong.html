@@ -8,16 +8,82 @@
 </head>
 <body>
     <script>
-       var table = "<table border ='1'>";
-        for (var i = 1; i <= 10; i++) {
-            table = table + "<tr>"
-            for (var j = 2; j <= 10; j++) {
-                table  = table + "<td>" + i + 'x' + j + '=' + (i*j) + "<td>";      
-            }
-            table = table + "</tr>"
-        } 
-        table = table + "</table>";
-        document.write(table);
-    </script>
+    //    var table = "<table border ='1'>";
+    //     for (var i = 1; i <= 10; i++) {
+    //         table = table + "<tr>"
+    //         for (var j = 2; j <= 10; j++) {
+    //             table  = table + "<td>" + i + 'x' + j + '=' + (i*j) + "<td>";      
+    //         }
+    //         table = table + "</tr>"
+    //     } 
+    //     table = table + "</table>";
+    //     document.write(table);
+
+    // let table = "<table border= '1'>";
+    //     for(let i = 1; i <= 10; i++) {
+    //         table += '<tr>';
+    //             for(let j = 1; j <=9; j++) {
+    //                 table += `<td style='text-align:right;'>$(j) x $(i) = $(i*j)</td>;
+    //             }
+    //             table += '</tr>';    
+    //     }
+    //     table += "</table>";
+    //     document.write(table);
+
+    // var table = "<table border= '1'>";
+    //     let i = 1;
+    //     let j = 2;
+    //     while (i <=9) {
+    //         table += "<tr>";
+    //             j=2;
+    //             while (i <=9) {
+    //             table += `<td> ${j} x ${i} = ${i*j} </td>`;
+    //             j++;
+    //         }
+    //         i++;
+    //         table += '</tr>';    
+    //         }
+    //     table += "</table>";
+    //     document.write(table);
+
+
+        //  let table = "<table border= '1'>";
+        //     let i = 1;
+        //     let j = 1;
+        //     do {
+        //         table += '<tr>';
+        //             j++;
+        //             j=2;
+        //             do {
+        //                 table += `<td> ${j} x ${i} = ${(i*j)} </td>`;
+        //             j++;  
+        //         } while (j <=9);
+        //         table += '</tr>';    
+        //     } while (i <=9);
+        //     table += "</table>";
+        //     document.write(table);
+
+        let table ="<table border='1'>";
+        let i=1;
+        let j=1;
+        do {
+            table += '<tr>';
+            i++;
+            j=2;
+            do {
+                // if(i*j % 2 == 0)
+                //     table += `<td style='background-color: red;'>${j} x ${i} = ${i*j}</td>`;
+                // else
+                //     table += `<td style='background-color: blue;'>${j} x ${i} = ${i*j}</td>`;
+                table += `<td style ='background-color: ${j%2==0 ? 'red' : 'green'}'> ${j} x ${i} = ${(i*j)} </td>`;
+                j++;
+
+            } while (j<=9);
+            table+= '</tr>';
+        } while (i<=9);
+        table += "</table>";
+        document.write(table); 
+        </script>
 </body>
 </html>
+<!-- table += !<td style ='background-color: ${j%2==0 ?' 'red' : 'green'}'> ${j} x ${i} = ${(i*j)} </td>`;  -->
