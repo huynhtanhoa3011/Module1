@@ -17,9 +17,13 @@
 <body>
     
     <table border="1" style="width: 800px;">
+        <!-- table border="1" bảng với kiểu đường biên 1, width: chiều rộng -->
         
         <caption>THỜI KHÓA BIỂU
+            <!-- Thẻ <caption> xác định chú thích bảng.
+             Thẻ <caption> phải được chèn ngay sau thẻ <table>. -->
             <p style="text-align: left;">Lớp:T0908I <br>
+                <!-- style="text-align: left, right;" căn chỉnh văn bản trái, phải  -->
                 Giáo viên:KhoaNV <br>
                 Phòng học:Class3/lab3
             </p>
@@ -28,8 +32,12 @@
                 Thứ 3,5,7
             </p>
         </caption>
+        
         <thead>
+            <!--Thẻ <thead> được sử dụng để nhóm nội dung tiêu đề trong bảng HTML.  -->
             <tr>
+                <!-- Thuộc tính colspan dùng để nối hai hoặc nhiều ô với nhau tính từ ô đặt thẻ này đi tới phía trước. -->
+                <!-- Thuộc tính rowspan dùng để nối hai hoặc nhiêu ô với nhau tính từ ô đặt thẻ đi xuống phía dưới. -->
                 <th rowspan="3" colspan="3"> </th>
                 <th  style="background-color: yellow;" colspan="3"> Thứ 3</th>
                 <th  style="background-color: yellow;" colspan="3"> Thứ 5</th>
@@ -38,6 +46,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- thẻ <tbody> được sử dụng để nhóm nội dung body trong một bảng HTML. -->
             <tr>
                 <th style="background-color: orange;">Tuần</th>
                 <th style="background-color: orange;">Ngày bắt đầu</th>
