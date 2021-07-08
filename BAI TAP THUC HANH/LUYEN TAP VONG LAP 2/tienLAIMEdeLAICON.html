@@ -8,12 +8,16 @@
 </head>
 <body>
     <script>
-        var money = parseInt(prompt("Enter a money: "));
-        var month = parseInt(prompt("Enter a month: "));
-        var interest = parseInt(prompt("Enter a interest: "))
-        var a = 0;
-        var b = money;
-        var 
+        var tienvay = parseInt(prompt("nhập số tiền vay: "));
+        var thangvay = parseInt(prompt("nhập số tháng vay: "));
+        var laisuat = parseInt(prompt("lãi suất: "));
+        var laithang;
+
+        for (var i = 1; i <= thangvay; i++) {
+            laithang = tienvay * laisuat;
+            tienvay = tienvay + laithang;
+        }
+        document.write(tienvay);
     </script>
 </body>
 </html>
