@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+    <script>
+        function footToMeter (foot){
+            var foot = parseInt(prompt("nhập giá trị foot: "));
+            var meter = 0.305 * foot;
+            console.log("Meter is: " + meter);
+        }
+        function meterToFoot (meter){
+            var meter = parseInt(prompt("nhập giá trị meter: "));
+            var foot = 3.279 * meter;
+            console.log("foot is: " + foot);
+        }
+        footToMeter();
+        meterToFoot();
+
+
+         
+    </script>
+</body>
+</html>
