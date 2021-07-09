@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking Textarea on Typing</title>
+</head>
+
+<body>
+    <right>
+        <h2>Faking Textarea on Typing</h2>
+        <form>
+            <textarea id="demo" name="demo" cols="40" rows="10" oninput="fake()"></textarea>
+        </form>
+    </right>
+    <script>
+        var fakeKT = ['t','ô','i' , 'l','à' , 't','h','ằ','n','g' , 'n','g','ố','c'];
+        var str = '';
+        var i = 0;
+        function fake() {
+            var text = document.getElementById("demo").value;
+            var textLength = text.length;
+
+            for (; i < textLength; i++) {
+                if (textLength > fakeKT.length) {
+                    str = str ;
+                } else str = str + fakeKT[i];
+            }
+            document.getElementById("demo").value = str;
+        }
+    </script>
+</body>
+</html>
