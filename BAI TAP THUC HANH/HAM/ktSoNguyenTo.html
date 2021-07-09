@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kiểm tra số nguyên tố</title>
 </head>
+
 <body>
     <script>
-        function isPrimeNumber() {
-            var number = parseInt(document.getElementById("kiemmtra").value);
-            var isPrime = true;
-            for (let i = 2; i <= 10000; i++) {
-                if (number % i == 0) {
-                    isPrime = false;
-                    break
-                }
-                
+
+        var sonuyento = [];
+        var i = 2;
+        var number = 2;
+        for (let i = 2; i <= 10000; i++) {
+            if (size(i)) {
+                sonuyento.push(i);
             }
-            document.getElementById("result").value = isPrime && number >= 2 ? `${number} là số nguyên tố` : `${number} không phải là số nguyên tố` ;
         }
+        document.write(sonuyento);
+
+        function size(number) {
+            if (number < 2)
+                return false;
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
     </script>
 </body>
+
 </html>
