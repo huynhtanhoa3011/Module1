@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài 1: Viết chương trình khởi tạo mảng 2 chiều, 
+        // gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng. 
+        // let a = [
+        //     [1, 2, 1, 24],
+        //     [8, 11, 9, 4],
+        //     [7, 0, 7, 27],
+        //     [7, 4, 28, 14],
+        //     [3, 10, 26, 7]
+        // ];
+        // for (let i = 0; i < a.length; i++) {
+        //     console.log ('row + i')
+        //     for (let j = 0; j < a.length; j++) {
+        //         console.log (a[i][j]);
+        //     }
+        // }
+
+
+        // Bài 2: các ký tự trong một mảng theo thứ tự đảo ngược.
+        // var arrs = ['c','s','c','2','6','1'];
+        // arrs.reverse().join('');
+        // document.write(arrs);
+
+
+        // Bài 3: Đếm số ký tự trong mảng.
+        // let arr = [1,2,3,4,5,'a',6];
+        // var arr2 = [];
+        // for(let i=0;i<arr.length;i++){
+        //     if(typeof arr[i] === 'number'){
+        //         arr2.push(arr[i]);        
+        //     }
+        // }
+        // console.log("số ký tự trong mảng :" + arr2.length);
+
+
+
+        // Bài 4: Đếm số từ trong chuỗi.
+        // let arr = [1,2,3,4,5,'a',6];
+        // var arr2 = [];
+        // for(let i=0;i<arr.length;i++){
+        //     if(typeof arr[i] === 'string'){
+        //         arr2.push(arr[i]);        
+        //     }
+        // }
+        // console.log("số từ trong chuỗi :" + arr2.length);
+
+
+        // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+        // let str1 = "Hello World";
+        // let str2 = "Hi! Codegym";
+        // console.log(str1.localeCompare(str2));               //(localeCompare: so sánh chuỗi)
+
+
+
+        // Bài 6: Viết chương trình nhập vào một mảng ký tự, 
+        // tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+        let arr = ['+', '-', '*', '/'];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == '-') {
+                (arr[i] = '_');
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>
