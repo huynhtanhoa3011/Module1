@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value = prompt("Nhập từ cần tìm: ");
+        let vie = ["táo","cam","chó","cây","xin chào"];
+        let eng = ["apple","orange","dog","tree","hello"];
+        var i;
+        function check(){
+            for(i = 0;i<vie.length;i++){
+                if(value==vie[i]){
+                    for(var j = 0;j<eng.length;j++){
+                        if(i==j)
+                            document.write(eng[j]);
+                    }
+                }
+                
+            }
+        }
+        check(value);
+    </script>
+</body>
+</html>
