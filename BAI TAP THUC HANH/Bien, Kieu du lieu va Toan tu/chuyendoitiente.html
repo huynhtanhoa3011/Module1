@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chuyen doi tien te</title>
 </head>
+
 <body>
     <table>
-       <tr>
-           <td colspan="4"><input type="text" id="number"></td>
-       </tr>
-       <tr>
-           <td>Form</td>
-           <td>
+        <tr>
+            <p style="color: blue;"><b>ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</b></p>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="text" id="number"></td>
+        </tr>
+        <tr>
+            <td>Form</td>
+            <td>
                 <select name="" id="from">
-               <option value="VND">VND</option>
-               <option value="USD">USD</option>
-           </select>
-           </td>
-           <td>To</td>
-           <td>
-               <select name="" id="to">
-               <option value="VND">VND</option>
-               <option value="USD">USD</option>
-               </select>
-           </td>
-           <tr>
-               <td colspan="4">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>To</td>
+            <td>
+                <select name="" id="to">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+        <tr>
+            <td>
                 <button onclick="chuyendoi()">count</button>
-               </td>
-           </tr>
-           <tr>
+            </td>
+        </tr>
+        <tr>
             <td>
                 <p id="demo"> </p>
             </td>
-            </tr>
-            </table>
-        <script>
-            function chuyendoi() {
-    var number= parseInt(document.getElementById ("number").value);
-    var from = document.getElementById ("from").value;
-    var to = document.getElementById ("to").value;
-    var count;
-    if (from == to) {
-        count = number  * 1 * 1;
-    } else if (from == "VND" && to == "USD") {
-        count = number * 1 / 22000;
-    } else if (from == "USD" && to == "VND") {
-        count = number * 1 * 22000;
-    }
-    console.log(count);
-    document.getElementById("demo").innerHTML = "restur :"  + count; 
-    }
-        </script>    
+        </tr>
+    </table>
+    <script>
+        function chuyendoi() {
+            var number = parseInt(document.getElementById("number").value);
+            var from = document.getElementById("from").value;
+            var to = document.getElementById("to").value;
+            var count;
+            if (from == to) {
+                count = number * 1 * 1;
+            } else if (from == "VND" && to == "USD") {
+                count = number * 1 / 22000;
+            } else if (from == "USD" && to == "VND") {
+                count = number * 1 * 22000;
+            }
+            console.log(count);
+            document.getElementById("demo").innerHTML = "restur :" + count;
+        }
+    </script>
 </body>
+
 </html>
