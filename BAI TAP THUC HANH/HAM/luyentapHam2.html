@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // bài 1: tính bình phương của một số
+        // function mathNumber(a) {
+        //     return a * a;
+        // }
+        // var number = parseInt(prompt("nhập số: "));
+        // var result = mathNumber(number);
+        // alert(`${number} bình phương bằng:  ${result}`);
+
+
+
+        // bài 2: tính s và c hình tròn
+        // let r = parseInt(prompt("Ban kinh hinh tron: "));
+        // function dientich(){
+        //     var s = r * r * 3.14;
+        //     console.log("Dien tich la: " + s);
+        // }
+        // function chuvi(){
+        //     var c = 2 * r * 3.14;
+        //     console.log("Chu vi la: " + c);
+        // }
+        // dientich();
+        // chuvi();
+
+
+
+
+        // bài 3: tính giai thừa
+        // let n = parseInt(prompt("Enter n: ")) ;
+        // function giaithua () {
+        //     var result = 1;
+        //     for (let i = 1; i < n; i++) {
+        //         result = result * i;
+        //     }
+        //     console.log(result);          
+        // }
+        // giaithua();
+
+
+
+
+        // bài 4: kiểm tra kí tự số
+        // var n = prompt("Enter n: ");
+        // function check() {
+        //     if (typeof (n) === 'number')
+        //         return true;
+        //     else
+        //         return false;
+        // }
+        // check();
+
+
+
+        // bài 5: 3 số nguyên, tìm số giá trị nhỏ nhất
+        // var a = parseInt(prompt("Nhap a: "));
+        // var b = parseInt(prompt("Nhap b: "));
+        // var c = parseInt(prompt("Nhap c: "));
+        // function nhonhat() {
+        //     document.write(Math.min(a, b, c));
+        // }
+        // nhonhat();
+
+
+
+             //  bài 6: kiểm tra số nguyên dương(true,false) 
+        // var num = parseInt(prompt("Nhap so: "));
+        // function check() {
+        //     if (num > 0)
+        //         return true;
+        //     else
+        //         return false;
+        // }
+        // check();
+
+
+
+            // bài 7: đổi chỗ 2 số nguyên.
+        // var a = parseInt(prompt("Nhap a: "));
+        // var b = parseInt(prompt("Nhap b: "));
+        // function change() {
+        //     let temp =a;
+        //     a=b;
+        //     b=temp
+        //     document.write("a=" +a);
+        //     document.write("b=" +b);
+        // }
+        // change();
+
+
+
+            // bài 8: đảo ngược mảng số nguyên
+        // let num = [1,2,3,4,5];
+        // function daonguoc(){
+        //     let arr;
+        //     arr = num.reverse();
+        //     document.write(arr);
+        // }
+        // daonguoc();
+
+
+
+        var string = prompt("Nhap vao 1 ky tu: ");
+        let array = ['a','b','c','d','e','f','b'];
+        var index = [];
+        var b = 0;
+        let flag = false;
+        function find(){
+            for(let i = 0;i < array.length;i++){
+                if(string == array[i]){
+                    flag = true;
+                    b = i;
+                    index.push(b);
+                }
+            }
+            flag ? document.write(index) : -1;
+        }
+        find();
+    </script>
+</body>
+
+</html>
