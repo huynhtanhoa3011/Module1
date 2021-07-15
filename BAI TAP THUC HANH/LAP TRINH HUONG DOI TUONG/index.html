@@ -32,7 +32,7 @@
 
         // VD2;
         // let aboutme = {
-        //     nam: ['Hoa Huynh'],
+        //     name: ['Hoa Huynh'],
         //     age: 31,
         //     nationality: 'Viet Nam',
         //     gender: 'male',
@@ -58,20 +58,29 @@
         // Cách 2:  lập trình hướng đối tượng OOP (Object constructor functions)
 
         // VD1:
-        function Student(mssv, name) {
-            this.mssv = mssv;
-            this.name = name;
-            this.learning = function () {
-                console.log(`Sinh viên ${this.mssv} - ${this.name} hoàn thành khóa học`);
+        // function Student(mssv, name) {
+        //     this.mssv = mssv;
+        //     this.name = name;
+        //     this.learning = function () {
+        //         console.log(`Sinh viên ${this.mssv} - ${this.name} hoàn thành khóa học`);
+        //     }
+        // }
+        // var Hieu = new Student("01C621H1", "Lê Văn Hiếu");
+        // var Hoang = new Student("02C621H1", "Lê Văn Hoàng");
 
+        // console.log(Hieu, Hoang);
+        // Hieu.learning();
+        // Hoang.learning();
+
+        function Staff () {
+            this.firstName;
+            this.ten = ten;
+            this.ngaysinh = ngaysinh;
+            this.giaithuong = giaithuong;
+            this.kiemtradieukien = function(date, age) {
+                
             }
         }
-        var Hieu = new Student("01C621H1", "Lê Văn Hiếu");
-        var Hoang = new Student("02C621H1", "Lê Văn Hoàng");
-
-        console.log(Hieu, Hoang);
-        Hieu.learning();
-        Hoang.learning();
 
     </script>
 </body>
