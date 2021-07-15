@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // CÁCH TẠO ĐỐI TƯỢNG TRONG JS
+        // Cách 1: lập trình thủ tục (Object literalt)
+
+        // VD1:
+        //         let person = {
+        //    name: ['Bob', 'Smith'],
+        //    age: 32,
+        //    gender: 'male',
+        //    interests: ['music', 'skiing'],
+        //    bio: function() {
+        //      alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        //    },
+        //    greeting: function() {
+        //      alert('Hi! I\'m ' + this.name[0] + '.');
+        //    }
+        //  };
+        //  console.log(person);
+
+
+
+        // VD2;
+        // let aboutme = {
+        //     nam: ['Hoa Huynh'],
+        //     age: 31,
+        //     nationality: 'Viet Nam',
+        //     gender: 'male',
+        //     married: 'true',
+        //     family: [
+        //         {
+        //             name: 'Nga Nguyen',
+        //             age: 30,
+        //         },
+        //         {
+        //             name: 'My Chi',
+        //             age: 3,
+        //         },
+        //     ],
+        //     byHouse: function() {
+        //         console.log('mua nhà')
+        //     },
+        // };
+        // console.log(aboutme);
+        // aboutme.byHouse();
+
+
+        // Cách 2:  lập trình hướng đối tượng OOP (Object constructor functions)
+
+        // VD1:
+        function Student(mssv, name) {
+            this.mssv = mssv;
+            this.name = name;
+            this.learning = function () {
+                console.log(`Sinh viên ${this.mssv} - ${this.name} hoàn thành khóa học`);
+
+            }
+        }
+        var Hieu = new Student("01C621H1", "Lê Văn Hiếu");
+        var Hoang = new Student("02C621H1", "Lê Văn Hoàng");
+
+        console.log(Hieu, Hoang);
+        Hieu.learning();
+        Hoang.learning();
+
+    </script>
+</body>
+
+</html>

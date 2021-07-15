@@ -20,43 +20,19 @@
   </head>
 
   <body>
-    <!-- square of <input type="text" id="input" oninput="caculate ()" /> is: <span id="result"></span> -->
-    <!-- <script> -->
-    <!-- // function square(number) {
-      //   var result = number * number;
-      //   return result;
-      // }
-
-      // function caculate() {
-      //   var input = document.getElementById("input").value;
-      //   var result = square(input);
-      //   document.getElementById("result").innerHTML = result;
-      // } -->
-
-
-
-
-    <!-- 
-    <p>Click the following button to call the function</p>
-    <form>
-      <input type="button" onclick="secondFunction()" value="Call Function">
-    </form>
-    <p>Use different parameters inside the function and then try...</p>
-
-    <script type="text/javascript">
-      function concatenate(first, last) {
-        var full;
-        full = first + last;
-        return full;
+    bình phương của <input type="text" id="input" oninput="caculate ()" /> bằng: <span id="result"></span>
+    <script>
+      function square(a) {
+        var result = a * a;
+        return result;
       }
-      function secondFunction() {
-        var result;
-        result = concatenate('Zara', 'Ali');
-        document.write(result);
-      } -->
-    <!-- </script> -->
 
-
+      function caculate() {
+        var input = document.getElementById("input").value;
+        var result = square(input);
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
 
     <script>
       // function square (num) {
