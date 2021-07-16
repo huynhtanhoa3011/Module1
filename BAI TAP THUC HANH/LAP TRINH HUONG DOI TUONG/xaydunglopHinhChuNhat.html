@@ -30,16 +30,16 @@
         var hinhchunhat = new Rectangle(200,150);
         var dientich = hinhchunhat.getDientich();
         var chuvi = hinhchunhat.getChuvi();
-        document.write(`"diện tích hình chữ nhật: " ${dientich} , "chu vi hình chữ nhật: " ${chuvi}`);
+        document.write(`diện tích hình chữ nhật:  ${dientich} , chu vi hình chữ nhật:  ${chuvi}`);
         
-        // function createHcn() {
-        //     var c = document.getElementById("myCanvas");
-        //     var ctx = c.getContext("2d");
-        //     ctx.beginPath()
-        //     ctx.rect(20, 20, hinhchunhat.getChieudai(), hinhchunhat.getChieurong());
-        //     ctx.fill();
-        // }
-        // createHcn();
+        function createHcn() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath()
+            ctx.rect(20, 20, hinhchunhat.getChieudai(), hinhchunhat.getChieurong());
+            ctx.fill();
+        }
+        createHcn();
 
     </script>
 </body>

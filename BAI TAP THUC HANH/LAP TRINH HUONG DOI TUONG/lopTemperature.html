@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+
+<body>
+    <script>
+        let Temparature = function(c) {
+            this.c = c;
+            this.getF = function () {
+                return (9 / 5) * this.c + 32;
+            }
+
+            this.getK = function () {
+                return this.c + 273.15;
+            }
+        };
+        let doC = new Temparature(20);
+        let doF = doC.getF();
+        let doK = doC.getK();
+        console.log(`20 độ C = ${doF}  độ F = ${doK} độ K`);
+    </script>
+</body>
+
+</html>
