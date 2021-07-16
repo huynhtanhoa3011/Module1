@@ -10,34 +10,21 @@
 
 <body>
     <script>
-        function creatMatrix(arr) {
-            var n = parseInt(prompt("Input n: "))
-            for (let i = 0; i <= n; i++) {
-                var colArray = [];
-                for (let j = 0; j <= n; j++) {
-                    colArray[j] = Math.floor(Math.random() * max + min);
+        function taoMaTran(size, min, max) {
+            let matran = [];
+            for (let i = 0; i < size; i++) {
+                let array = [];
+                for (let j = 0; j < size; j++) {
+                    array[j] = Math.floor(Math.random() * (max - min + 1) + min);
                 }
-                rowArray[i] = colArray;
+                matran[i] = array;
             }
-            return arr;
+            return matran;
         }
-        document.write();
-        // var n = parseInt(prompt("nhap kich co ma tran n: "));
-        // var matran = [];
-        // function taoMaTran() {
-        //     for (let i = 0; i < size; i++) {
-        //         let array = [];
-        //         for (let j = 0; j < size; j++) {
-        //             array[j] = Math.floor(Math.random() * (max - min + 1) + min);
-        //         }
-        //         matran[i] = array;
-        //     }
-
-        //     return matran;
-        // }
-        // document.write(taoMaTran(matran));
-
-
+        let size = + prompt("nhập kích cỡ ma trận :");
+        let min = 10;
+        let max = 40;
+        document.write(`${taoMaTran()}`);
 
         // tính tổng số chẵn của ma trận
         // function tinhtongSochan(arr) {
