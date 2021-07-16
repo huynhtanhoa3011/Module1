@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xây dựng lớp hình chữ nhật</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300px" height="200px" style="border: 1px solid #b62121;"></canvas>
+    <script>
+        let Rectangle = function (chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+            this.getDientich = function () {
+                return chieudai * chieurong;
+            }
+            this.getChuvi = function () {
+                return (chieudai + chieurong) * 2;
+            }
+            this.getChieudai = function () {
+                return this.chieudai;
+            }
+            this.getChieurong = function () {
+                return this.chieurong;
+            }
+        };
+        var hinhchunhat = new Rectangle(200,150);
+        var dientich = hinhchunhat.getDientich();
+        var chuvi = hinhchunhat.getChuvi();
+        document.write(`"diện tích hình chữ nhật: " ${dientich} , "chu vi hình chữ nhật: " ${chuvi}`);
+        
+        // function createHcn() {
+        //     var c = document.getElementById("myCanvas");
+        //     var ctx = c.getContext("2d");
+        //     ctx.beginPath()
+        //     ctx.rect(20, 20, hinhchunhat.getChieudai(), hinhchunhat.getChieurong());
+        //     ctx.fill();
+        // }
+        // createHcn();
+
+    </script>
+</body>
+
+</html>
