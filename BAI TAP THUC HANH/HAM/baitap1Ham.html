@@ -14,25 +14,25 @@
         let size = parseInt(prompt("nhập kích cỡ ma trận :"));
         let min = 10;
         let max = 50;
-        function creatMatrix(arr) {
+        function taoMatran(arr) {
             for (let i = 0; i < size; i++) {
-                let matrixChild = [];
+                let matran = [];
                 for (let j = 0; j < size; j++) {
-                    matrixChild[j] = Math.floor(Math.random() * max) + min;
+                    matran[j] = Math.floor(Math.random() * max) + min;
                 }
-                arr[i] = matrixChild;
+                arr[i] = matran;
             }
             return arr;
         }
-        function displayMatrix(arr) {
+        function hienthiMatran(arr) {
             for (let i = 0; i < arr.length; i++) {
                 document.write(arr[i]);
                 document.write("<br>");
             }
         }
         var matran = [];
-        console.log(creatMatrix(matran));
-        var hienthi = displayMatrix(matran);
+        console.log(taoMatran(matran));
+        var hienthi = hienthiMatran(matran);
 
 
         // tính tổng số chẵn của ma trận
@@ -73,20 +73,49 @@
 
 
         // tính tổng đường biên
-        // function tinhtongDuongBien(arr) {
-        //     let tongduongbien = 0;
-        //     for (let i = 0; i < arr.length; i++) {
-        //         for (let j = 0; j < arr[i].length; j++) {
-        //             if (i == 0 || i == arr.length - 1) {
-        //                 tongduongbien += arr[i][j];
-        //             } else if (j == 0 || j == arr[j].length - 1) {
-        //                 tongduongbien += arr[i][j];
-        //             }
+        function tinhtongDuongBien(arr) {
+            let tongduongbien = 0;
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (i == 0 || i == arr.length - 1) {
+                        tongduongbien += arr[i][j];
+                    } else if (j == 0 || j == arr[j].length - 1) {
+                        tongduongbien += arr[i][j];
+                    }
+                }
+            }
+            return tongduongbien;
+        }
+        document.write("tổng đường biên: " + tinhtongDuongBien(matran) + "<br>");
+
+
+        // hiển thị ma trận tam giác dưới
+        function drawTamGiacTren(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < i; j++) {
+                    document.write(arr[i][j]);
+
+                }
+                document.write("<br>");
+
+            }
+
+        }
+
+
+        // function drawTamGiacDuoi(arr) {
+        //     for (let i = arr.length - 1; i > 0; i--) {
+        //         for (let j = 0; j < i; j++) {
+        //             document.write(arr[i][j])
         //         }
+        //         document.write("<br>");
         //     }
-        //     return tongduongbien;
         // }
-        // console.log("tổng đường biên: " + tinhtongDuongBien(matran));
+
+        
+
+
+
     </script>
 </body>
 
