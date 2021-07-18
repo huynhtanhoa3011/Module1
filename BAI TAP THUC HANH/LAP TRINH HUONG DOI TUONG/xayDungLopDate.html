@@ -10,43 +10,83 @@
 
 <body>
     <script>
-        let myDate = function (day, month, year) {
+        // let myDate = function (day, month, year) {
+        //     this.day = day;
+        //     this.month = month;
+        //     this.year = year;
+
+        //     this.getDay = function () {
+        //         return this.day;
+        //     }
+        //     this.getMonth = function () {
+        //         return this.month;
+        //     }
+        //     this.getYear = function () {
+        //         return this.year;
+        //     }
+
+        //     this.setDay = function (day) {
+        //         this.day = day;
+        //     }
+        //     this.setMonth = function (month) {
+        //         this.month = month;
+        //     }
+        //     this.setYear = function (year) {
+        //         this.year = year;
+        //     }
+        // };
+        // let date = new myDate(10, 10, 2019);
+        // let day = date.getDay();
+        // let month = date.getMonth();
+        // let year = date.getYear();
+        // alert(day + "/" + month + "/" + year);
+        // console.log(`${date.getDay()}/${date.getMonth()}/${date.getYear()}`);
+
+        // date.setDay(15);
+        // date.setMonth(07);
+        // date.setYear(2021);
+        // alert(day + "/" + month + "/" + year);
+        // console.log(`${date.getDay()}/${date.getMonth()}/${date.getYear()}`);
+
+        let myDate = function(day, month, year) {
             this.day = day;
             this.month = month;
             this.year = year;
 
             this.getDay = function () {
                 return this.day;
-            }
+            } 
             this.getMonth = function () {
                 return this.month;
             }
             this.getYear = function () {
-                return this.year;
+            return this.year;
             }
 
-            this.setDay = function (day) {
-                this.day = day;
-            }
-            this.setMonth = function (month) {
-                this.month = month;
-            }
-            this.setYear = function (year) {
-                this.year = year;
-            }
+            // this.setDay = function (day) {
+            //     this.day = day;
+            // }
+            // this.setMonth = function (month) {
+            //     this.month = month;
+            // }
+            // this.setYear = function (year) {
+            //     this.year = year;
+            // }
         };
-        let date = new myDate(10, 10, 2019);
+
+        let date = new myDate(10,10,2018);
         let day = date.getDay();
         let month = date.getMonth();
         let year = date.getYear();
         alert(day + "/" + month + "/" + year);
         console.log(`${date.getDay()}/${date.getMonth()}/${date.getYear()}`);
 
-        date.setDay(15);
-        date.setMonth(07);
-        date.setYear(2021);
-        alert(day + "/" + month + "/" + year);
-        console.log(`${date.getDay()}/${date.getMonth()}/${date.getYear()}`);
+        // date.setDay(15);
+        // date.setMonth(07);
+        // date.setYear(2021);
+        // alert(day + "/" + month + "/" + year);
+        // console.log(`${date.getDay()}/${date.getMonth()}/${date.getYear()}`);
+
 
 
     </script>
