@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quản lý sản phẩm</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <h2 style="color: blue;">Add New Product</h2>
+    <h2>Add New Product</h2>
     <table>
         <tr>
-            <td>
-                <input type="text" id ="txt" placeholder="mặt hàng cần thêm">
-                <input type="button" name="Add" id="btn" value="Add" onclick="thêm()">
-                <input type="button"            id="btn2" value="display" onclick="hienthi()">
-            </td>
+            <td><input type="text" id="enter" placeholder="New product" style="width: 400px;height: 25px;"></td>
+            <td><input type="button" style="background-color: rgb(11, 190, 122); width: 100px;height: 30px;" value="Add" onclick="them()"></td>
         </tr>
         <tr>
-            <td>
-                <input type="text" id="txt2" placeholder="mặt hàng cần xóa">
-                <input type="button" value="delete" onclick="xóa()">
-            </td>
+            <td><input type="text" id="delete" placeholder="Delete product" style="height: 25px;width: 400px;"></td>
+            <td><input type="button" style="background-color: rgb(186, 216, 218); width: 100px;height: 30px;" value="Delete" onclick="xoa()"></td>
         </tr>
         <tr>
-            <td>
-                <input type="text" id="txt3" placeholder="mặt hàng cần sữa">
-                <input type="button" value="change" onclick="sửa()"><br>
-                <input type="text" id="txt4" placeholder="mặt hàng mới">
-            </td>
+            <td><input type="button" value="Display" style="background-color: rgb(238, 234, 12);" onclick="hienthi()"></td>
         </tr>
     </table>
-    <h2 style="color: chocolate;">Display All Product</h2>
-    <div id = "result"></div>
+    <h2>Display All Product</h2>
+    <div id="result"></div>
+    <p id="table1">
+    </p>
+    <br>
     <script>
-        var item = ['Sony Xperia', 'Nokia 6', 'Samsung Galaxy', 'IphoneX', 'Oppo A71'];
-        function hienthi () {
-            let a = "</hr>";
-            for(let i = 0; i < item.length; i++) {
-                a = a + item[i] + "<br/>";
+        var productList = [];
+        var data = "";
+
+        function hienthi() {
+            data = `<table>`;
+            for (let i = 0; i < productList.length; i++) {
+                data = data + `<tr>
+                    <td style="width: 400px; height: 25px;" id="id${i}"> 
+                        ${productList[i]} 
+                    </td> `;
             }
-            document.getElementById('result').innerHTML = a;
+            data = data + `</table>`;
+            document.getElementById('result').innerHTML = data;
         }
 
-        
+        function them() {
+            var addd = document.getElementById("enter").value;
+            productList.push(addd);
+            alert("Đã thêm")
+            console.log(productList);
+        }
+
+        function xoa() {
+            var delet = document.getElementById("delete").value;
+            for (let i = 0; i < productList.length; i++) {
+                if (delet == productList[i]) {
+                    productList.splice(delet, 1);
+                    alert("Đã xóa")
+                }
+            }
+        }
     </script>
 </body>
+
 </html>
