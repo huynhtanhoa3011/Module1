@@ -38,7 +38,7 @@
                 document.write("<br>");
             }
         }
-        
+
         hienThi(arr1);
         document.write("----------------");
         document.write("<br>");
@@ -48,61 +48,62 @@
 
 
         //Tổng 2 ma trận
-        // function tong(arr1, arr2) {
-        //     var arr = [];
-        //     for (let i = 0; i < arr2.length; i++) {
-        //         arr[i] = new Array();
-        //         for (let j = 0; j < arr1.length; j++) {
-        //             arr[i][j] = new Array();
-        //         }
-        //     }
-        //     for (let i = 0; i < arr.length; i++) {
-        //         for (let j = 0; j < arr[i].length; j++) {
-        //             arr[i][j] = 0;
-        //         }
-        //     }
+        function tong(arr1, arr2) {
+            var arr = [];
+            for (let i = 0; i < arr2.length; i++) {
+                arr[i] = new Array();
+                for (let j = 0; j < arr1.length; j++) {
+                    arr[i][j] = new Array();
+                }
+            }
 
-        //     for (let i = 0; i < arr.length; i++) {
-        //         for (let j = 0; j < arr[i].length; j++) {
-        //             arr[i][j] += arr1[i][j] + arr2[i][j];
-        //         }
-        //     }
-        //     return arr;
-        // }
-        // document.write("tổng 2 ma trận:");
-        // document.write("<br>");
-        // hienThi(tong(arr1, arr2));
-        // document.write("--------------------------");
-        // document.write("<br>");
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    arr[i][j] = 0;
+                }
+            }
+
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    arr[i][j] += arr1[i][j] + arr2[i][j];
+                }
+            }
+            return arr;
+        }
+        document.write("tổng 2 ma trận:");
+        document.write("<br>");
+        hienThi(tong(arr1, arr2));
+        document.write("---------------");
+        document.write("<br>");
 
 
         //Tích 2 ma trận
-        // function tich(arr1, arr2) {
-        //     var arr = [];
-        //     for (let i = 0; i < arr2.length; i++) {
-        //         arr[i] = new Array();
-        //         for (let j = 0; j < arr1.length; j++) {
-        //             arr[i][j] = new Array();
-        //         }
-        //     }
-        //     for (let i = 0; i < arr.length; i++) {
-        //         for (let j = 0; j < arr[i].length; j++) {
-        //             arr[i][j] = 0;
-        //         }
-        //     }
+        function tich(arr1, arr2) {
+            var arr = [];
+            for (let i = 0; i < arr2.length; i++) {
+                arr[i] = new Array();
+                for (let j = 0; j < arr1.length; j++) {
+                    arr[i][j] = new Array();
+                }
+            }
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    arr[i][j] = 0;
+                }
+            }
 
-        //     for (let i = 0; i < arr.length; i++) {
-        //         for (let j = 0; j < arr[i].length; j++) {
-        //             for (let k = 0; k < arr1.length; k++) {
-        //                 arr[i][j] += arr1[i][k] * arr2[k][j];
-        //             }
-        //         }
-        //     }
-        //     return arr;
-        // }
-        // document.write("tích 2 ma trận: ");
-        // document.write("<br>");
-        // hienThi(tich(arr1, arr2));
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    for (let k = 0; k < arr1.length; k++) {
+                        arr[i][j] += arr1[i][k] * arr2[k][j];
+                    }
+                }
+            }
+            return arr;
+        }
+        document.write("tích 2 ma trận: ");
+        document.write("<br>");
+        hienThi(tich(arr1, arr2));
     </script>
 </body>
 
