@@ -5,10 +5,11 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>HUNTING SNAKE </title>
 </head>
 
 <body>
+   <!-- vẽ canvas tạo ra bộ khung chứa game -->
    <canvas id="canvas" width="590px" height="590px" style="border: 2px solid #270566;"></canvas>
    <script>
       var canvas = document.getElementById("canvas");
@@ -17,17 +18,17 @@
       function drawRect(x, y, color) {
          var size = 20;
          var padding = 2;
-
          ctx.beginPath();
          ctx.fillStyle = color;
          ctx.rect((size + padding) * x, (size + padding) * y, size, size);
          ctx.fill();
       }
+
       var tableSize = 27;
       class User {
          x = 0;
          y = 0;
-         color = "#000";
+         color = "red";
          dire = 2;
          tailList = [];
 
@@ -38,17 +39,16 @@
                this.tailList[i] = prev;
                prev = temp;
             }
-
             switch (this.dire) {
                case 0: this.x -= 1; break;
                case 1: this.y -= 1; break;
                case 2: this.x += 1; break;
                case 3: this.y += 1; break;
-
             }
             this.x = this.loop(this.x);
             this.y = this.loop(this.y);
          }
+
          addTail() {
             this.tailList.push({ x: this.x, y: this.y });
          }
@@ -62,10 +62,11 @@
             return value;
          }
       }
+
       class Item {
          x = 0;
          y = 0;
-         color = "#00f";
+         color = "green";
          randomPosition() {
             this.x = parseInt(Math.random() * tableSize);
             this.y = parseInt(Math.random() * tableSize);
@@ -75,14 +76,13 @@
       var user = new User();
       var item = new Item();
       item.randomPosition();
-
       setInterval(function () {
-         // console.log("#");
          for (var x = 0; x < tableSize; x++) {
             for (var y = 0; y < tableSize; y++) {
-               drawRect(x, y, "#eee");
+               drawRect(x, y, "wheat");
             }
          }
+
          user.update();
          if (user.x == item.x && user.y == item.y) {
             user.addTail();
