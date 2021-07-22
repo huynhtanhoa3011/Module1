@@ -5,55 +5,57 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>HUNTING SNAKE </title>
+   <title>Document</title>
 </head>
 
 <body>
-   <!-- vẽ canvas tạo ra bộ khung chứa game -->
+   <!-- tạo khung chứa trò chơi(sử dụng thẻ canvas để vẽ) -->
    <canvas id="canvas" width="590px" height="590px" style="border: 2px solid #270566;"></canvas>
    <script>
+      // thẻ canvas là một đối tượng trong html, nên cần lấy đối tượng ra để xử lý (document.getElementById("canvas"));
       var canvas = document.getElementById("canvas");
-      var ctx = canvas.getContext("2d");
+      var ctx = canvas.getContext("2d");   // đồ họa 2 chiều
 
-      function drawRect(x, y, color) {
+      function drawRect(x, y, color) { // tạo hàm function để vẽ đường di chuyển có tọa độ x,y        
          var size = 20;
-         var padding = 2;
-         ctx.beginPath();
+         var padding = 2; // khoảng hở các ô là 2px
+
+         ctx.beginPath();  // bắt đầu con đường
          ctx.fillStyle = color;
          ctx.rect((size + padding) * x, (size + padding) * y, size, size);
          ctx.fill();
       }
-
       var tableSize = 27;
-      class User {
+      class User {        // đối tượng rắn
          x = 0;
          y = 0;
          color = "red";
          dire = 2;
-         tailList = [];
+         tailList = [];   // nối chuỗi (đuôi của rắn)
 
-         update() {
+         update() {       // cập nhật
             var prev = { x: this.x, y: this.y };
             for (var i in this.tailList) {
                var temp = this.tailList[i];
                this.tailList[i] = prev;
                prev = temp;
             }
-            switch (this.dire) {
-               case 0: this.x -= 1; break;
-               case 1: this.y -= 1; break;
-               case 2: this.x += 1; break;
-               case 3: this.y += 1; break;
+
+            switch (this.dire) {     //  lệnh switch case tập  hợp danh sách các trường hợp rắn di chuyển
+               case 0: this.x -= 1; break;    // rắn di chuyển sang trái               
+               case 1: this.y -= 1; break;    // rắn di chuyển sang lên trên               
+               case 2: this.x += 1; break;    // rắn di chuyển sang phải                
+               case 3: this.y += 1; break;    // rắn di chuyển sang xuống dưới  
+
             }
             this.x = this.loop(this.x);
             this.y = this.loop(this.y);
          }
-
-         addTail() {
+         addTail() {       // dùng lệnh push để nối một phần tử vào phía cuối mảng (thêm đuôi)
             this.tailList.push({ x: this.x, y: this.y });
          }
 
-         loop(value) {
+         loop(value) {     // câu lệnh điều kiện if , else if thực thi dòng lệnh.
             if (value < 0) {
                value = tableSize - 1;
             } else if (value > tableSize - 1) {
@@ -62,12 +64,11 @@
             return value;
          }
       }
-
-      class Item {
+      class Item {         // đối tượng thức ăn
          x = 0;
          y = 0;
          color = "green";
-         randomPosition() {
+         randomPosition() {    // vị trí ngẫu nhiên
             this.x = parseInt(Math.random() * tableSize);
             this.y = parseInt(Math.random() * tableSize);
          }
@@ -76,13 +77,13 @@
       var user = new User();
       var item = new Item();
       item.randomPosition();
-      setInterval(function () {
+
+      setInterval(function () {    // đặt khoảng thời gian
          for (var x = 0; x < tableSize; x++) {
             for (var y = 0; y < tableSize; y++) {
-               drawRect(x, y, "wheat");
+               drawRect(x, y, "white");
             }
          }
-
          user.update();
          if (user.x == item.x && user.y == item.y) {
             user.addTail();

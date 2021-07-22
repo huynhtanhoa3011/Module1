@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake</title>
+</head>
+<body>
+    <canvas id ="canvas" width="590" height="590" style="border: 2px solid brown;"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        function drawRect (x, y, color) {
+            var size = 20;
+            var padding = 2;
+            ctx.beginPath ();
+            ctx.fillStyle = color;
+            ctx.rect((size + padding) * x, (size + padding) * y, size, size);
+            ctx.fill();
+        }
+        var tableSize = 27;
+        class User {
+            x = 0;
+            y = 0;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+    <table>
+        <form action="">
+            <tr>
+                <td>number:</td>
+                <td><input type=" number" name="" id="kt"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="kiểm tra" onclick="test()"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="display" disabled></td>
+            </tr>
+        </form>
+    </table>
+    <script>
+        function test() {
+            let number = parseInt(document.getElementById("kt").value);
+            let isPrime = true;
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            document.getElementById('display').value = isPrime && number >= 2 ? `${number} là số nguyên tố` : `${number} không là số nguyên tố`
+        }
+    </script>
+</body>
+</html>

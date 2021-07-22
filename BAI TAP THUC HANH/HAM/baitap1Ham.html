@@ -27,7 +27,7 @@
         function hienthiMatran(arr) {
             for (let i = 0; i < arr.length; i++) {
                 document.write(arr[i]);
-                document.write("<br>");
+                // document.write("<br>");
             }
         }
         var matran = [];
@@ -36,79 +36,81 @@
 
 
         // tính tổng số chẵn của ma trận
-        function tinhtongSochan(arr) {
-            let tong = 0;
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < (arr[i].length); j++) {
-                    if (arr[i][j] % 2 == 0) {
-                        tong += parseInt(arr[i][j]);
-                    }
-                }
-            }
-            return tong;
-        }
-        document.write("tổng các số chẵn: " + tinhtongSochan(matran) + ("<br>"));
+        // function tinhtongSochan(arr) {
+        //     let tong = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < (arr[i].length); j++) {
+        //             if (arr[i][j] % 2 == 0) {
+        //                 tong += parseInt(arr[i][j]);
+        //             }
+        //         }
+        //     }
+        //     return tong;
+        // }
+        // document.write("tổng các số chẵn: " + tinhtongSochan(matran) + ("<br>"));
 
 
         // tính tổng đường chéo chính
-        function tinhtongDuongCheoChinh(arr) {
-            let tongchinh = 0;
-            for (let i = 0; i < arr.length; i++) {
-                tongchinh += arr[i][i];
-            }
-            return tongchinh;
-        }
-        document.write("tổng đường chéo chính: " + tinhtongDuongCheoChinh(matran) + ("<br>"));
+        // function tinhtongDuongCheoChinh(arr) {
+        //     let tongchinh = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         tongchinh += arr[i][i];
+        //     }
+        //     return tongchinh;
+        // }
+        // document.write("tổng đường chéo chính: " + tinhtongDuongCheoChinh(matran) + ("<br>"));
 
 
         // tính tổng đường chéo phụ
-        function tinhtongDuongCheoPhu(arr) {
-            let tongphu = 0;
-            for (let i = arr.length - 1; i >= 0; i--) {
-                tongphu += arr[i][arr.length - i - 1];
-            }
-            return tongphu;
-        }
-        document.write("tổng đường chéo phụ; " + tinhtongDuongCheoPhu(matran) + ("<br>"));
+        // function tinhtongDuongCheoPhu(arr) {
+        //     let tongphu = 0;
+        //     for (let i = arr.length - 1; i >= 0; i--) {
+        //         tongphu += arr[i][arr.length - i - 1];
+        //     }
+        //     return tongphu;
+        // }
+        // document.write("tổng đường chéo phụ; " + tinhtongDuongCheoPhu(matran) + ("<br>"));
 
 
         // tính tổng đường biên
-        function tinhtongDuongBien(arr) {
-            let tongduongbien = 0;
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < arr[i].length; j++) {
-                    if (i == 0 || i == arr.length - 1) {
-                        tongduongbien += arr[i][j];
-                    } else if (j == 0 || j == arr[j].length - 1) {
-                        tongduongbien += arr[i][j];
-                    }
-                }
-            }
-            return tongduongbien;
-        }
-        document.write("tổng đường biên: " + tinhtongDuongBien(matran) + "<br>");
+        // function tinhtongDuongBien(arr) {
+        //     let tongduongbien = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < arr[i].length; j++) {
+        //             if (i == 0 || i == arr.length - 1) {
+        //                 tongduongbien += arr[i][j];
+        //             } else if (j == 0 || j == arr[j].length - 1) {
+        //                 tongduongbien += arr[i][j];
+        //             }
+        //         }
+        //     }
+        //     return tongduongbien;
+        // }
+        // document.write("tổng đường biên: " + tinhtongDuongBien(matran) + "<br>");
 
 
         // hiển thị ma trận tam giác dưới
-        function hienthiTamGiacTren(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                for (let j = 0; j < i; j++) {
-                    document.write(arr[i][j]);
-                }
-                document.write("<br>");
-            }
-        }
+        // function hienthiTamGiacTren(arr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < i; j++) {
+        //             document.write(arr[i][j]);
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // hienthiTamGiacTren(arr);
 
 
         // hiển thị ma trận tam giác trên
-        function hienthiTamGiacDuoi(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-                for (let j = 0; j < i; j++) {
-                    document.write(arr[i][j])
-                }
-                document.write("<br>");
-            }
-        }
+        // function hienthiTamGiacDuoi(arr) {
+        //     for (let i = arr.length - 1; i > 0; i--) {
+        //         for (let j = 0; j < i; j++) {
+        //             document.write(arr[i][j])
+        //         }
+        //         document.write("<br>");
+        //     }
+        // }
+        // hienthiTamGiacDuoi(arr)
 
         
 
